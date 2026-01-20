@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'UnifixSP';
+    src: url('fonts/UnifixSP/UnifixSPDemo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+
+    background: #F4F6FB;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.left-menu{
+    width: 10%;
+    height: 100vh;
+
+    background: #D4D4D4;
+
+    display: flex;
+    flex-direction: column;
+}
+.up-left-menu{
+    width: 100%;
+    height: 30%;
+    background: #D4D4D4;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#calendar{
+    width: 90%;
+    height: 5vh;
+    border-radius: 2vh;
+
+    margin-top: 1vh;
+
+    background: linear-gradient(90deg, #AF50EE, #126CFD);
+    border: none;
+    text-transform: uppercase;
+    color: #f3f3f3;
+
+    font-family: 'UnifixSP', sans-serif;
+    font-size: 2vh;
+    font-weight: 900;
+
+    /* transition: scale 0.3s; */
+}
+/* #calendar:hover{
+    scale: 1.02 1.09;
+} */
+#omissions{
+    width: 90%;
+    height: 5vh;
+    border-radius: 2vh;
+
+    margin-top: 1vh;
+
+    background: linear-gradient(90deg, #282828, #8967FD);
+    border: none;
+    text-transform: uppercase;
+    color: #f3f3f3;
+
+    font-family: 'UnifixSP', sans-serif;
+    font-size: 2vh;
+    font-weight: 900;
+
+    /* transition: scale 0.3s; */
+}
+/* #omissions:hover{
+    scale: 1.02 1.09;
+} */
+.down-left-menu{
+    width: 100%;
+    height: 70%;
+    background: #8967FD;
+
+    border-top-left-radius: 3vh;
+    border-top-right-radius: 3vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#password{
+    width: 90%;
+    height: 5vh;
+    border-radius: 2vh;
+
+    margin-top: 1vh;
+
+    background: #fff;
+    border: none;
+    /* text-transform: uppercase; */
+    color: #1e1e1e;
+
+    font-family: 'UnifixSP', sans-serif;
+    font-size: 2vh;
+    outline: none;
+    text-align: center;
+}
+#log-in{
+    width: 90%;
+    height: 5vh;
+    border-radius: 2vh;
+
+    margin-top: 1vh;
+
+    background: #f3f3f3;
+    border: none;
+    text-transform: uppercase;
+    color: #1e1e1e;
+
+    font-family: 'UnifixSP', sans-serif;
+    font-size: 2vh;
+
+    /* transition: scale 0.3s; */
+}
+/* #log-in:hover{
+    scale: 1.02 1.09;
+} */
+
+main{
+    width: 90%;
+    height: 100vh;
+
+    background: none;
+}
+
+
+
+
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 10px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 6px 12px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    color: #333;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calendar-header {
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 0;
+    background: #eee;
+}
+
+.calendar-day {
+    min-height: 100px;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.calendar-day.other-month {
+    background: #f9f9f9;
+    color: #aaa;
+}
+
+.calendar-day.sunday {
+    background: #fff8f8;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.lessons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85em;
+}
+
+.lessons li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 2px 0;
+}
