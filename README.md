@@ -15,3 +15,18 @@
 
 **База данных:**
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+eduflow/
+├── index.php          # Главная страница
+├── calendar.php       # Календарь расписания
+├── schedule/          # Управление расписанием
+│   ├── add.php       # Добавить занятие
+│   ├── edit.php      # Изменить занятие
+│   └── delete.php    # Удалить занятие
+├── users/             # Пользователи
+│   ├── students.php  # Учащиеся
+│   └── teachers.php  # Преподаватели
+├── css/               # Стили
+├── js/                # Скрипты
+└── database/          # База данных
+    └── schema.sql    # Структура БД
