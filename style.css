@@ -5,201 +5,194 @@
     font-style: normal;
 }
 
-html, body{
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100%;
-
-    background: #F4F6FB;
+    box-sizing: border-box;
 }
-body{
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: #f5f7fa; */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    min-height: 100vh;
+
+    background: url(media/icons/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.left-menu {
+    width: 10%;
+    background: #fff;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+}
+
+.up-left-menu button,
+.down-left-menu button {
+    background: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.up-left-menu button:hover,
+.down-left-menu button:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* .up-left-menu button#calendar {
+    background: #4a90e2;
+    color: white;
+} */
+
+.down-left-menu input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.down-left-menu input:focus{
+    outline: #8967FD solid 0.2vh;
 }
 .left-menu{
-    width: 10%;
-    height: 100vh;
-
-    background: #D4D4D4;
-
     display: flex;
-    flex-direction: column;
-}
-.up-left-menu{
-    width: 100%;
-    height: 30%;
-    background: #D4D4D4;
-
-    display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
+}
+
+#log-in{
+    background: #8967FD;
+    color: #f3f3f3;
+    font-family: 'UnifixSP', sans-serif;
+    width: 100%;
 }
 #calendar{
-    width: 90%;
-    height: 5vh;
-    border-radius: 2vh;
-
-    margin-top: 1vh;
-
-    background: linear-gradient(90deg, #AF50EE, #126CFD);
-    border: none;
-    text-transform: uppercase;
-    color: #f3f3f3;
-
+    background: url(media/icons/button2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'UnifixSP', sans-serif;
-    font-size: 2vh;
-    font-weight: 900;
-
-    /* transition: scale 0.3s; */
-}
-/* #calendar:hover{
-    scale: 1.02 1.09;
-} */
-#omissions{
-    width: 90%;
-    height: 5vh;
-    border-radius: 2vh;
-
-    margin-top: 1vh;
-
-    background: linear-gradient(90deg, #282828, #8967FD);
-    border: none;
-    text-transform: uppercase;
     color: #f3f3f3;
-
-    font-family: 'UnifixSP', sans-serif;
     font-size: 2vh;
-    font-weight: 900;
-
-    /* transition: scale 0.3s; */
-}
-/* #omissions:hover{
-    scale: 1.02 1.09;
-} */
-.down-left-menu{
+    
     width: 100%;
-    height: 70%;
-    background: #8967FD;
-
-    border-top-left-radius: 3vh;
-    border-top-right-radius: 3vh;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
 }
-#password{
-    width: 90%;
-    height: 5vh;
-    border-radius: 2vh;
-
-    margin-top: 1vh;
-
-    background: #fff;
-    border: none;
-    /* text-transform: uppercase; */
-    color: #1e1e1e;
-
-    font-family: 'UnifixSP', sans-serif;
-    font-size: 2vh;
-    outline: none;
-    text-align: center;
-}
-#log-in{
-    width: 90%;
-    height: 5vh;
-    border-radius: 2vh;
-
-    margin-top: 1vh;
-
-    background: #f3f3f3;
-    border: none;
-    text-transform: uppercase;
-    color: #1e1e1e;
-
+#omissions{
+    background: url(media/icons/button1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'UnifixSP', sans-serif;
     font-size: 2vh;
 
-    /* transition: scale 0.3s; */
-}
-/* #log-in:hover{
-    scale: 1.02 1.09;
-} */
-
-main{
-    width: 90%;
-    height: 100vh;
-
-    background: none;
+    width: 100%;
 }
 
-
-
-
+main {
+    flex: 1;
+    margin-left: 10%;
+    padding: 20px;
+    overflow-y: auto;
+}
 
 .calendar-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
-    padding: 0 10px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .nav-btn {
     text-decoration: none;
-    padding: 6px 12px;
-    background: #f0f0f0;
-    border-radius: 4px;
+    padding: 8px 16px;
+    background: #e0e0e0;
+    border-radius: 20px;
     color: #333;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background: #d0d0d0;
 }
 
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
-    max-width: 800px;
+    gap: 8px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .calendar-header {
     text-align: center;
     font-weight: bold;
-    padding: 8px 0;
+    padding: 10px;
     background: #eee;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
 .calendar-day {
-    min-height: 100px;
-    padding: 4px;
-    background: #fff;
+    min-height: 120px;
+    padding: 8px;
+    background: white;
     border: 1px solid #ddd;
+    border-radius: 6px;
     position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    overflow: hidden;
+}
+
+.calendar-day:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 .calendar-day.other-month {
-    background: #f9f9f9;
+    background: #fafafa;
     color: #aaa;
+    border-color: #eee;
 }
 
 .calendar-day.sunday {
     background: #fff8f8;
+    border-color: #ffcccc;
 }
 
 .day-number {
     font-weight: bold;
-    margin-bottom: 4px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: right;
+    color: #555;
 }
 
 .lessons {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 0.85em;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 .lessons li {
@@ -207,4 +200,51 @@ main{
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 2px 0;
+    color: #222;
+}
+
+.lesson-num {
+    font-weight: bold;
+    color: #007bff;
+    margin-right: 4px;
+}
+
+.no-lessons {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sunday-text {
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+
+.calendar-day.sunday {
+    background: #fff8f8;
+    border: 2px solid #ffcccc;
+    position: relative;
+}
+
+.calendar-day.sunday::before {
+    content: "🟥";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 12px;
+}
+
+.sunday-text {
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
 }
