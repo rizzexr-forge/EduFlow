@@ -104,6 +104,20 @@ $view_year_month = $view_month;
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="media/icons/icon-light.png">
     <title>EduFlow</title>
+
+
+
+
+    <!-- Open Graph / Facebook / Telegram -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vash-sait.ru">
+<meta property="og:title" content="EduFlow">
+<meta property="og:description" content="Запись расписаний и освобождений">
+<meta property="og:image" content="https://vash-sait.rupath/to/image.jpg">
+
+
+
+
     <style>
         .lesson-edited {
             color: #000;
