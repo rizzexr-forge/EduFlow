@@ -103,33 +103,57 @@ INSERT INTO schedule (week_type, day_of_week, lesson_number, subject) VALUES
 
 
 -- Таблица измененного расписания
-CREATE TABLE edit_schedule (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+-- CREATE TABLE edit_schedule (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
 
-    week_type ENUM('odd', 'even') NOT NULL
-        COMMENT 'odd = нечетная (1,3), even = четная (2,4)',
+--     week_type ENUM('odd', 'even') NOT NULL
+--         COMMENT 'odd = нечетная (1,3), even = четная (2,4)',
 
-    day_of_week ENUM(
-        'monday',
-        'tuesday',
-        'wednesday',
-        'thursday',
-        'friday',
-        'saturday'
-    ) NOT NULL,
+--     day_of_week ENUM(
+--         'monday',
+--         'tuesday',
+--         'wednesday',
+--         'thursday',
+--         'friday',
+--         'saturday'
+--     ) NOT NULL,
 
-    lesson_number TINYINT NOT NULL
-        COMMENT 'Номер пары',
+--     lesson_number TINYINT NOT NULL
+--         COMMENT 'Номер пары',
 
-    subject VARCHAR(255) NOT NULL,
+--     subject VARCHAR(255) NOT NULL,
 
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 
-ALTER TABLE edit_schedule
-ADD UNIQUE (week_type, day_of_week, lesson_number);
+-- ALTER TABLE edit_schedule
+-- ADD UNIQUE (week_type, day_of_week, lesson_number);
 
 ALTER TABLE schedule
 ADD UNIQUE (week_type, day_of_week, lesson_number);
+
+
+
+
+
+
+
+CREATE TABLE edit_schedule (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    
+    -- Конкретная дата занятия
+    lesson_date DATE NOT NULL,
+    
+    -- Номер пары
+    lesson_number TINYINT NOT NULL,
+    
+    -- Название предмета
+    subject VARCHAR(255) NOT NULL,
+    
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    
+    -- Уникальный индекс, чтобы на одно и то же время в одну дату нельзя было поставить две пары
+    UNIQUE (lesson_date, lesson_number)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
