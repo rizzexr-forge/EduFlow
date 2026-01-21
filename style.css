@@ -17,7 +17,7 @@ body {
     display: flex;
     min-height: 100vh;
 
-    background: url(media/icons/background.png);
+    background: url(media/backgrounds/4.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -88,16 +88,26 @@ body {
     background-size: cover;
     font-family: 'UnifixSP', sans-serif;
     color: #f3f3f3;
-    font-size: 2vh;
+    /* font-size: 2vh; */
     
     width: 100%;
+
+
+
+
+
+    background: #8967FD;
+    color: #f3f3f3;
+    font-family: 'UnifixSP', sans-serif;
+    width: 100%;    
+    border-radius: 100vh;
 }
 #omissions{
     background: url(media/icons/button1.png);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'UnifixSP', sans-serif;
-    font-size: 2vh;
+    /* font-size: 2vh; */
 
     width: 100%;
 }
@@ -115,9 +125,9 @@ main {
     align-items: center;
     margin-bottom: 20px;
     padding: 10px 0;
-    background: white;
+    /* background: white; */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.05); */
 }
 
 .nav-btn {
@@ -128,6 +138,8 @@ main {
     color: #333;
     font-weight: bold;
     transition: background 0.2s;
+
+    font-family: 'UnifixSP', sans-serif;
 }
 
 .nav-btn:hover {
@@ -149,6 +161,10 @@ main {
     background: #eee;
     border-radius: 4px;
     font-size: 14px;
+
+
+
+    font-family: 'UnifixSP', sans-serif;
 }
 
 .calendar-day {
@@ -205,7 +221,7 @@ main {
 
 .lesson-num {
     font-weight: bold;
-    color: #007bff;
+    color: #8967FD;
     margin-right: 4px;
 }
 
@@ -227,13 +243,13 @@ main {
 
 
 .calendar-day.sunday {
-    background: #fff8f8;
-    border: 2px solid #ffcccc;
+    background: #f2fffe;
+    border: 2px solid #00FFEA;
     position: relative;
 }
 
 .calendar-day.sunday::before {
-    content: "🟥";
+    /* content: "🟥"; */
     position: absolute;
     top: 4px;
     right: 4px;
@@ -247,4 +263,16 @@ main {
     margin-top: 10px;
     font-style: italic;
     font-weight: bold;
+
+    
+    color: #00b4a5;
 }
+#vs{
+    color: #00b4a5;
+}
+
+
+
+
+
+

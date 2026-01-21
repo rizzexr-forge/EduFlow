@@ -87,8 +87,10 @@ $end->modify('+6 days'); // чтобы показать полную после�
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="media/icons/icon-dark.png">
-    <title>Расписание</title>
+    <link rel="icon" href="media/icons/icon-light.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+
+    <title>EduFlow</title>
 </head>
 <body>
     
@@ -105,9 +107,11 @@ $end->modify('+6 days'); // чтобы показать полную после�
 
     <main>
         <div class="calendar-nav">
-            <a href="?month=<?= $prev_link ?>" class="nav-btn">&laquo; Пред.</a>
+            <!-- <a href="?month=<?= $prev_link ?>" class="nav-btn">&laquo; Пред.</a> -->
+            <a href="?month=<?= $prev_link ?>" class="nav-btn">назад</a>
             <h2><?= $first_day->format('F Y') ?></h2>
-            <a href="?month=<?= $next_link ?>" class="nav-btn">След. &raquo;</a>
+            <!-- <a href="?month=<?= $next_link ?>" class="nav-btn">След. &raquo;</a> -->
+            <a href="?month=<?= $next_link ?>" class="nav-btn">вперед</a>
         </div>
 
         <div class="calendar-grid">
@@ -118,7 +122,7 @@ $end->modify('+6 days'); // чтобы показать полную после�
             <div class="calendar-header">Чт</div>
             <div class="calendar-header">Пт</div>
             <div class="calendar-header">Сб</div>
-            <div class="calendar-header">Вс</div>
+            <div class="calendar-header" id="vs">Вс</div>
 
             <?php
             while ($current <= $end) {
