@@ -5,29 +5,14 @@
 
 ## 🛠️ Технологии
 
-**Frontend:**
+# Frontend:
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-**Backend:**
+# Backend:
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-**База данных:**
+# Database:
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-
-eduflow/
-├── index.php          # Главная страница
-├── calendar.php       # Календарь расписания
-├── schedule/          # Управление расписанием
-│   ├── add.php       # Добавить занятие
-│   ├── edit.php      # Изменить занятие
-│   └── delete.php    # Удалить занятие
-├── users/             # Пользователи
-│   ├── students.php  # Учащиеся
-│   └── teachers.php  # Преподаватели
-├── css/               # Стили
-├── js/                # Скрипты
-└── database/          # База данных
-    └── schema.sql    # Структура БД
