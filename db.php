@@ -2,9 +2,9 @@
 // db.php
 session_start();
 $db_server = "127.0.0.1";
-$db_user = "root";
-$db_pass = "";
-$db_name = "university_schedule";
+$db_user = "eduflow";
+$db_pass = "uM8xN8eT6n";
+$db_name = "user2161882_university_schedule";
 
 // Check if we are in an API context (simple check)
 $is_api = (strpos($_SERVER['REQUEST_URI'] ?? '', 'api.php') !== false);

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Университетское Расписание</title>
+    <title>EduFlow</title>
     <link rel="icon" href="icons/icon.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,6 +103,6 @@
     <!-- Overlay backdrop -->
     <div id="modalBackdrop" class="modal-backdrop"></div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=<?=time()?>"></script>
 </body>
 </html>

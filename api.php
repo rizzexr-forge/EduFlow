@@ -1,6 +1,7 @@
 <?php
 // api.php
 require_once 'db.php';
+date_default_timezone_set('Europe/Moscow'); // Ensure consistent time on server
 // session_start(); // Already started in db.php
 
 header('Content-Type: application/json');
@@ -141,7 +142,8 @@ try {
                 foreach ($overrides as $ov) {
                     $p = $ov['pair_number'];
                     if ($ov['is_cancelled']) {
-                        $finalPairs[$p]['subject'] = null;
+                        // Keep the base subject for display, just mark as cancelled
+                        // $finalPairs[$p]['subject'] remains whatever it was (base or null)
                         $finalPairs[$p]['is_cancelled'] = true;
                     } else {
                         $finalPairs[$p]['subject'] = $ov['new_subject_name'];

@@ -134,7 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 let classes = 'pair-content';
 
                 if (pair.is_cancelled) {
-                    content = '<span class="pair-cancelled">Отмена</span>';
+                    // Display original subject name (or 'Отмена' if none) with strikethrough
+                    const originalSubject = pair.subject || 'Отмена';
+                    content = `<span class="pair-cancelled">${originalSubject}</span>`;
                 } else if (pair.subject) {
                     content = pair.subject;
                     if (pair.is_override) {
